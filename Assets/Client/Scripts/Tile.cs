@@ -14,7 +14,11 @@ public sealed class Tile : MonoBehaviour
 
         set
         {
-            
+            if (_item = value) return;
+
+            _item = value;
+
+            icon.sprite = _item.sprite;
         }
     }
 
