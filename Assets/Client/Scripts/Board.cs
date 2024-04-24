@@ -21,7 +21,7 @@ public sealed class Board : MonoBehaviour
         {
             for (var x = 0; x < Width; x++)
             {
-                
+                Tiles[x, y] = rows[y].tiles[x];
             }
         }
     }
