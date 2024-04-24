@@ -10,4 +10,6 @@ public sealed class Board : MonoBehaviour
 
     public int Width => Tiles.GetLength(0);
     public int Height => Tiles.GetLength(1);
+
+    private void Awake() => Instance = this;
 }
