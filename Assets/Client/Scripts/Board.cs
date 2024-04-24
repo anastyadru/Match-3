@@ -15,7 +15,7 @@ public sealed class Board : MonoBehaviour
 
     private void Start()
     {
-        Tiles = new Tile[rows.Max(row => row.tiles.Lenght), rows.Lenght];
+        Tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length];
 
         for (var y = 0; y < Height; y++)
         {
