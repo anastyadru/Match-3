@@ -6,7 +6,17 @@ public sealed class Tile : MonoBehaviour
     public int x;
     public int y;
 
-    public Item item;
+    private Item _item;
+
+    public Item Item
+    {
+        get => _item;
+
+        set
+        {
+            
+        }
+    }
 
     public Image icon;
 
