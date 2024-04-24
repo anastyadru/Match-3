@@ -12,4 +12,17 @@ public sealed class Board : MonoBehaviour
     public int Height => Tiles.GetLength(1);
 
     private void Awake() => Instance = this;
+
+    private void Start()
+    {
+        Tiles = new Tile[rows.Max(row => row.tiles.Lenght), rows.Lenght];
+
+        for (var y = 0; y < Height; y++)
+        {
+            for (var x = 0; x < Width; x++)
+            {
+                
+            }
+        }
+    }
 }
