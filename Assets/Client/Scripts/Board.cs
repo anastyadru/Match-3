@@ -19,7 +19,15 @@ public sealed class Board : MonoBehaviour
         Tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length];
 
         for (var y = 0; y < Height; y++)
+        {
             for (var x = 0; x < Width; x++)
-                Tiles[x, y] = rows[y].tiles[x];
+            {
+                var tile = rows[y].tiles[x];
+
+                Tiles[x, y] = tile;
+
+                tile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
+            }
+        }
     }
 }
