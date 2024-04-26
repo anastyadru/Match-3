@@ -52,7 +52,8 @@ public sealed class Board : MonoBehaviour
     {
         var icon1 = tile1.icon;
         var icon2 = tile2.icon;
-        
-        
+
+        var icon1Transform = icon1.transform;
+        var icon2Transform = icon2.transform;
     }
 }
