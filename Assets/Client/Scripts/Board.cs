@@ -12,6 +12,8 @@ public sealed class Board : MonoBehaviour
     public int Width => Tiles.GetLength(0);
     public int Height => Tiles.GetLength(1);
 
+    private readonly List<Tile> _selection = new List<Tile>();
+
     private void Awake() => Instance = this;
 
     private void Start()
@@ -32,5 +34,10 @@ public sealed class Board : MonoBehaviour
                 Tiles[x, y] = tile;
             }
         }
+    }
+
+    public void Select(Tile tile)
+    {
+        if (!_selection.Contains(title))
     }
 }
