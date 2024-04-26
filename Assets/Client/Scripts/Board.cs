@@ -67,5 +67,10 @@ public sealed class Board : MonoBehaviour
 
         icon1Transform.SetParent(tile2.transform);
         icon2Transform.SetParent(tile1.transform);
+
+        tile1.icon = icon2;
+        tile2.icon = icon1;
+        
+        
     }
 }
