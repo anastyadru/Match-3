@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public sealed class Board : MonoBehaviour
@@ -45,5 +46,13 @@ public sealed class Board : MonoBehaviour
         Debug.Log($"Selected tiles at ({_selection[0].x}, {_selection[0].y}) and ({_selection[1].x}, {_selection[1].y})");
         
         _selection.Clear();
+    }
+
+    public async Task Swap(Tile tile1, Tile tile2)
+    {
+        var icon1 = tile1.icon;
+        var icon2 = tile2.icon;
+        
+        
     }
 }
