@@ -58,8 +58,10 @@ public sealed class Board : MonoBehaviour
         var icon2Transform = icon2.transform;
 
         var sequence = DOTween.Sequence();
+
+        sequence.Join(icon1Transform.DOMove(icon2Transform.position, TweenDuration))
+            .Join(icon2Transform.DOMove(icon1Transform.position, TweenDuration));
         
-        sequence.Join(icon1Transform.DOMove(icon1Transform.position, TweenDuration))
-                .Join(icon2Transform.DOMove(icon1Transform.position, TweenDuration))
+        
     }
 }
