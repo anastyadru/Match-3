@@ -66,6 +66,6 @@ public sealed class Board : MonoBehaviour
             .AsyncWaitForCompletion();
 
         icon1Transform.SetParent(tile2.transform);
-        
+        icon2Transform.SetParent(tile1.transform);
     }
 }
