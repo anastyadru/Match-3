@@ -70,7 +70,10 @@ public sealed class Board : MonoBehaviour
 
         tile1.icon = icon2;
         tile2.icon = icon1;
-        
-        
+
+        var tile1Item = tile1.Item;
+
+        tile1.Item = tile2.Item;
+        tile2.Item = tile1.Item;
     }
 }
