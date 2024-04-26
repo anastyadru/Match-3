@@ -15,6 +15,7 @@ public sealed class Board : MonoBehaviour
 
     private readonly List<Tile> _selection = new List<Tile>();
 
+    private const float TweenDuration = 0.25f;
     private void Awake() => Instance = this;
 
     private void Start()
@@ -55,5 +56,7 @@ public sealed class Board : MonoBehaviour
 
         var icon1Transform = icon1.transform;
         var icon2Transform = icon2.transform;
+        
+        var saquence = 
     }
 }
