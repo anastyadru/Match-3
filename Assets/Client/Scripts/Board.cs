@@ -56,7 +56,9 @@ public sealed class Board : MonoBehaviour
 
         var icon1Transform = icon1.transform;
         var icon2Transform = icon2.transform;
+
+        var sequence = DOTween.Sequence();
         
-        var saquence = 
+        
     }
 }
