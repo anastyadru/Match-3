@@ -61,7 +61,8 @@ public sealed class Board : MonoBehaviour
 
         sequence.Join(icon1Transform.DOMove(icon2Transform.position, TweenDuration))
             .Join(icon2Transform.DOMove(icon1Transform.position, TweenDuration));
-        
-        
+
+        await sequence.Play()
+            .AsyncWaitForCompletion();
     }
 }
