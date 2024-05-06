@@ -3554,6 +3554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 990006993}
   - component: {fileID: 990006994}
+  - component: {fileID: 990006995}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -3627,8 +3628,44 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 990006995}
+        m_TargetAssemblyTypeName: ToggleController, Assembly-CSharp
+        m_MethodName: ToggleMusic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 668654861}
+        m_TargetAssemblyTypeName: AudioToggler, Assembly-CSharp
+        m_MethodName: OnOffSounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
+--- !u!114 &990006995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990006992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26956314b2d929499883619fd636673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1021211127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,7 +4003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1077037395
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5902,6 +5939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819223937}
   - component: {fileID: 1819223938}
+  - component: {fileID: 1819223939}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -5982,6 +6020,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1819223939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819223936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 272c3304d4d10104c9cfbea753593c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1819223938}
+  oldVolume: 0
 --- !u!114 &1840601016 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6521942107854086689, guid: b93bd6968f876884d99ff87ec7d24e2d, type: 3}
