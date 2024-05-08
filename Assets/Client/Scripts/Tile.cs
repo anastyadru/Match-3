@@ -49,6 +49,11 @@ public sealed class Tile : MonoBehaviour
 		{
 			exclude = new List<Tile> { this, };
 		}
-		
+		else
+		{
+			exclude.Add(this);
+		}
+
+		return result;
 	}
 }
