@@ -79,4 +79,11 @@ public sealed class Board : MonoBehaviour
         tile1.Item = tile2.Item;
         tile2.Item = tile1.Item;
     }
+
+    private bool CanPop()
+    {
+        throw new NotImplementedException();
+    }
+    
+    
 }
