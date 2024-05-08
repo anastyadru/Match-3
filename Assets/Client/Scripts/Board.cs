@@ -85,5 +85,8 @@ public sealed class Board : MonoBehaviour
         throw new NotImplementedException();
     }
     
-    
+    private bool Pop()
+    {
+        throw new NotImplementedException();
+    }
 }
