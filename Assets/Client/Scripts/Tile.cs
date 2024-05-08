@@ -27,7 +27,7 @@ public sealed class Tile : MonoBehaviour
     public Button button;
 
 	public Tile Left => x > 0 ? Board.Instance.Tiles[x - 1, y] : null;
-
+	public Tile Top => y > 0 ? Board.Instance.Tiles[x, y - 1] : null;
 
     private void Start() => button.onClick.AddListener(() => Board.Instance.Select(this));
 }
