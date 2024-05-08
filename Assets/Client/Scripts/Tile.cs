@@ -33,7 +33,10 @@ public sealed class Tile : MonoBehaviour
 
 	public Tile[] Neighbours => new[]
 	{
-
+		Left;
+		Top;
+		Right;
+		Bottom;
 	}; 
 
     private void Start() => button.onClick.AddListener(() => Board.Instance.Select(this));
