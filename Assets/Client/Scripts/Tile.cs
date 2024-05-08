@@ -43,6 +43,12 @@ public sealed class Tile : MonoBehaviour
 
 	public List<Tile> GetConnectedTiles(List<Tile> exclude = null)
 	{
+		var result = new List<Tile> { this, };
 
+		if (exclude = null)
+		{
+			exclude = new List<Tile> { this, };
+		}
+		
 	}
 }
