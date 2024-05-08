@@ -54,6 +54,11 @@ public sealed class Tile : MonoBehaviour
 			exclude.Add(this);
 		}
 
+		foreach (var neighbour in Neighbours)
+		{
+
+		}
+
 		return result;
 	}
 }
