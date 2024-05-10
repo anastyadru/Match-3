@@ -104,7 +104,10 @@ public sealed class Board : MonoBehaviour
     {
         for (var y = 0; y < Height; y++)
         {
-            
+            for (var x = 0; y < Width; x++)
+            {
+                
+            }
         }
             
     }
