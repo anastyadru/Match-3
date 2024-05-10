@@ -85,6 +85,7 @@ public sealed class Board : MonoBehaviour
     {
         for (var y = 0; y < Height; y++)
             for (var x = 0; y < Width; x++)
+                if (Tiles[x, y].GetConnectedTiles().Skip(1).Count() >= 2)
     }
     
     private bool Pop()
