@@ -100,8 +100,12 @@ public sealed class Board : MonoBehaviour
         return false;
     }
     
-    private bool Pop()
+    private void Pop()
     {
-        throw new NotImplementedException();
+        for (var y = 0; y < Height; y++)
+        {
+            
+        }
+            
     }
 }
