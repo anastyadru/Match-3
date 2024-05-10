@@ -49,6 +49,15 @@ public sealed class Board : MonoBehaviour
         Debug.Log($"Selected tiles at ({_selection[0].x}, {_selection[0].y}) and ({_selection[1].x}, {_selection[1].y})");
         
         await Swap(_selection[0], _selection[1]);
+
+        if (CanPop())
+        {
+            Pop();
+        }
+        else
+        {
+            await Swap(_selection[0], _selection[1]);
+        }
         
         _selection.Clear();
     }
