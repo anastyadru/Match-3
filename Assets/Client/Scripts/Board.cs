@@ -83,7 +83,8 @@ public sealed class Board : MonoBehaviour
 
     private bool CanPop()
     {
-        throw new NotImplementedException();
+        for (var y = 0; y < Height; y++)
+            for (var x = 0; y < Width; x++)
     }
     
     private bool Pop()
