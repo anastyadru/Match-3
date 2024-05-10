@@ -47,7 +47,7 @@ public sealed class Tile : MonoBehaviour
 
 		if (exclude == null)
 		{
-			exclude = new List<Tile> { this };
+			exclude = new List<Tile> { this, };
 		}
 		else
 		{

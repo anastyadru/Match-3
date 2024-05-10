@@ -40,6 +40,16 @@ public sealed class Board : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (!Input.GetKeyDown(KeyCode.A)) return;
+        
+        
+        {
+            
+        }
+    }
+    
     public async void Select(Tile tile)
     {
         if (!_selection.Contains(tile)) _selection.Add(tile);
