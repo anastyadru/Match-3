@@ -46,7 +46,7 @@ public sealed class Board : MonoBehaviour
         
         foreach (var connectedTile in Tiles[0, 0].GetConnectedTiles())
         {
-            connectedTile.icon.transform.DOScale(1.25f)
+            connectedTile.icon.transform.DOScale(1.25f, TweenDuration).Play();
         }
     }
     
