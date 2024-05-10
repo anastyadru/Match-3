@@ -24,7 +24,6 @@ public sealed class Tile : MonoBehaviour
     }
 
     public Image icon;
-
     public Button button;
 
 	public Tile Left => x > 0 ? Board.Instance.Tiles[x - 1, y] : null;
@@ -46,9 +45,9 @@ public sealed class Tile : MonoBehaviour
 	{
 		var result = new List<Tile> { this, };
 
-		if (exclude = null)
+		if (exclude == null)
 		{
-			exclude = new List<Tile> { this, };
+			exclude = new List<Tile> { this };
 		}
 		else
 		{
@@ -57,7 +56,7 @@ public sealed class Tile : MonoBehaviour
 
 		foreach (var neighbour in Neighbours)
 		{
-			if (neighbour = null || exclude.Contains(neighbour) || neighbour.Item != Item) continue;
+			if (neighbour == null || exclude.Contains(neighbour) || neighbour.Item != Item) continue;
 
 			result.AddRange(neighbour.GetConnectedTiles(exclude));
 		}
