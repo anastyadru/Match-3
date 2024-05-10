@@ -44,9 +44,9 @@ public sealed class Board : MonoBehaviour
     {
         if (!Input.GetKeyDown(KeyCode.A)) return;
         
-        
+        foreach (var connectedTile in Tiles[0, 0].GetConnectedTiles())
         {
-            
+            connectedTile.
         }
     }
     
