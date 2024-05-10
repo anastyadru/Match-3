@@ -106,6 +106,8 @@ public sealed class Board : MonoBehaviour
         {
             for (var x = 0; y < Width; x++)
             {
+                var tile = Tiles[x, y];
+                
                 
             }
         }
