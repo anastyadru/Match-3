@@ -110,7 +110,7 @@ public sealed class Board : MonoBehaviour
 
                 var connectedTiles = tile.GetConnectedTiles();
                 
-                
+                if(connectedTiles.Count < 2) continue;
             }
         }
             
