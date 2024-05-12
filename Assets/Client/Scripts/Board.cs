@@ -113,8 +113,9 @@ public sealed class Board : MonoBehaviour
                 if (connectedTiles.Count < 2) continue;
 
                 var deflateSequence = DOTween.Sequence();
-                
-                
+
+                foreach (var connectedTile in connectedTiles)
+                    deflateSequence.Join(connectedTile.icon.transform.DOScale(Vector3.zero, TweenDuration));
             }
         }
             
