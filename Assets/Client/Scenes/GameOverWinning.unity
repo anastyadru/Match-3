@@ -310,11 +310,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 562206517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ed2f70327fa5c49af2671942049651, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c59f7889aa752840a59acdef8c55e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseGame: 0
-  pauseGameMenu: {fileID: 0}
 --- !u!114 &562206519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 894940274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 562206518}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &894940274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1330,7 +1340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2128643599}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 562206518}
+        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2128643599
 MonoBehaviour:
   m_ObjectHideFlags: 0
