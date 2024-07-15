@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GameM : MonoBehaviour
 {
-    [SerializeField] private Text _waveText;
+    [SerializeField] private Text _movesText;
     
     void Start()
     {
