@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class GameM : MonoBehaviour
 {
+    [SerializeField] private Text _waveText;
+    
     void Start()
     {
         
