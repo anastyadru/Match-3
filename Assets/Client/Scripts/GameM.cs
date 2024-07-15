@@ -10,6 +10,8 @@ public class GameM : MonoBehaviour
 {
     [SerializeField] private Text _movesText;
     
+    [SerializeField] private int _movesCount = 25;
+    
     void Start()
     {
         
