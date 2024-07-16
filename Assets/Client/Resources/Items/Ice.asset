@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96079df4075e9b845ba0133e40002712, type: 3}
   m_Name: Ice
   m_EditorClassIdentifier: 
-  value: 5
+  value: 0
   sprite: {fileID: 21300000, guid: c1e9639b7fff440438580646cf5d3886, type: 3}
