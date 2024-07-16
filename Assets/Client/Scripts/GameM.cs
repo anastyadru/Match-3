@@ -12,6 +12,7 @@ public class GameM : MonoBehaviour
     [SerializeField] private Text _scoreText;
     
     [SerializeField] private int _movesCount = 25;
+    [SerializeField] private int _scoreCount = 0;
     
     void Start()
     {
