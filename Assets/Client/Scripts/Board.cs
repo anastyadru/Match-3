@@ -11,7 +11,9 @@ using System;
 public sealed class Board : MonoBehaviour
 {
     public static Board Instance { get; private set; }
+
     public Row[] rows;
+
     public Tile[,] Tiles { get; private set; }
 
     public int Width => Tiles.GetLength(0);
