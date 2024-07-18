@@ -35,7 +35,7 @@ public sealed class Board : MonoBehaviour
                 tile.x = x;
                 tile.y = y;
                 
-                tile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
+                tile.Item = ItemDatabase.Items[UnityEngine.Random.Range(0, ItemDatabase.Items.Length)];
 
                 Tiles[x, y] = tile;
             }
