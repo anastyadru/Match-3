@@ -74,8 +74,7 @@ public sealed class Board : MonoBehaviour
 
         var sequence = DOTween.Sequence();
 
-        sequence.Join(icon1Transform.DOMove(icon2Transform.position, TweenDuration))
-            .Join(icon2Transform.DOMove(icon1Transform.position, TweenDuration));
+        sequence.Join(icon1Transform.DOMove(icon2Transform.position, TweenDuration)).Join(icon2Transform.DOMove(icon1Transform.position, TweenDuration));
 
         await sequence.Play()
             .AsyncWaitForCompletion();
