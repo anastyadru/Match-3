@@ -116,7 +116,9 @@ public sealed class Board : MonoBehaviour
 
                 var deflateSequence = DOTween.Sequence();
 
-                foreach (var connectedTile in connectedTiles)deflateSequence.Join(connectedTile.icon.transform.DOScale(Vector3.zero, TweenDuration));
+                foreach (var connectedTile in connectedTiles) deflateSequence.Join(connectedTile.icon.transform.DOScale(Vector3.zero, TweenDuration));
+
+                await deflateSequence.Play().AsyncWaitForCompletion();
                 
                 var inflateSequence = DOTween.Sequence();
 
