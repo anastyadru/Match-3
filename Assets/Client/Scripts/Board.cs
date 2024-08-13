@@ -119,6 +119,8 @@ public sealed class Board : MonoBehaviour
                 foreach (var connectedTile in connectedTiles) deflateSequence.Join(connectedTile.icon.transform.DOScale(Vector3.zero, TweenDuration));
 
                 await deflateSequence.Play().AsyncWaitForCompletion();
+
+                ScoreCounter.Instance.Score += tile.Item.value * connectedTiles.Count;
                 
                 var inflateSequence = DOTween.Sequence();
 
