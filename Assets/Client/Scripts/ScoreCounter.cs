@@ -20,4 +20,8 @@ public sealed class ScoreCounter : MonoBehaviour
             scoreText.SetText($"Score = {_score}");
         }
     }
+
+    [SerializeField] private TextMeshProUGUI scoreText;
+
+    private void Awake() => Instance = this;
 }
