@@ -125,9 +125,11 @@ public sealed class Board : MonoBehaviour
                 foreach (var connectedTile in connectedTiles)
                 {
                     connectedTile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
-                    
-                    
+
+                    inflateSequence.Join(connectedTiles.icon.transform.DOScale(Vector3.one, TweenDuration));
                 }
+                
+                
             }
         }
             
