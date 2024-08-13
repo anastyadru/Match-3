@@ -129,7 +129,7 @@ public sealed class Board : MonoBehaviour
                     inflateSequence.Join(connectedTiles.icon.transform.DOScale(Vector3.one, TweenDuration));
                 }
                 
-                
+                await inflateSequence.Play().AsyncWaitForCompletion();
             }
         }
             
