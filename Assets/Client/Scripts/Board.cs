@@ -108,14 +108,17 @@ public sealed class Board : MonoBehaviour
                 var tile = Tiles[x, y];
                 var connectedTiles = tile.GetConnectedTiles();
                 if (connectedTiles.Skip(1).Count() < 2) continue;
+                
                 var deflateSequence = DOTween.Sequence();
                 foreach (var connectedTile in connectedTiles) deflateSequence.Join(connectedTile.icon.transform.DOScale(Vector3.zero, TweenDuration));
                 await deflateSequence.Play().AsyncWaitForCompletion();
+                
                 ScoreCounter.Instance.Score += tile.Item.value * connectedTiles.Count;
+                
                 var inflateSequence = DOTween.Sequence();
                 foreach (var connectedTile in connectedTiles)
                 {
-                    connectedTile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
+                    connectedTile.Item = ItemDatabase.Items[UnityEngine.Random.Range(0, ItemDatabase.Items.Length)];
                     inflateSequence.Join(connectedTile.icon.transform.DOScale(Vector3.one, TweenDuration));
                 }
                 await inflateSequence.Play().AsyncWaitForCompletion();
