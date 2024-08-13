@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class GameM : MonoBehaviour
 {
-    [SerializeField] private Text _movesText;
+    // [SerializeField] private Text _movesText;
     
-    [SerializeField] private int _movesCount = 25;
+    // [SerializeField] private int _movesCount = 25;
     
     void Start()
     {
