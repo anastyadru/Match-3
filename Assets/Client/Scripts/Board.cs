@@ -54,7 +54,6 @@ public sealed class Board : MonoBehaviour
                 {
                     _selection.Add(tile);
                 }
-                
             }
             else
             {
