@@ -19,31 +19,27 @@ public sealed class Board : MonoBehaviour
 
     private const float TweenDuration = 0.25f;
     private void Awake() => Instance = this;
-    
+
     private void Start()
     {
-        InitializeTiles();
-    }
+        Tiles = new Tile[rows.Max(row => row.tiles.Length), rows.Length];
 
-    private void InitializeTiles()
-    {
-        int width = rows[0].tiles.Length;
-        int height = rows.Length;
-        Tiles = new Tile[width, height];
-
-        for (var y = 0; y < height; y++)
+        for (var y = 0; y < Height; y++)
         {
-            for (var x = 0; x < width; x++)
+            for (var x = 0; x < Width; x++)
             {
                 var tile = rows[y].tiles[x];
+
                 tile.x = x;
                 tile.y = y;
-                tile.Item = ItemDatabase.Items[Random.Range(0, ItemDatabase.Items.Length)];
+                
+                tile.Item = ItemDatabase.Items[UnityEngine.Random.Range(0, ItemDatabase.Items.Length)];
+
                 Tiles[x, y] = tile;
             }
         }
     }
-
+    
     public async void Select(Tile tile)
     {
         if (!_selection.Contains(tile))
