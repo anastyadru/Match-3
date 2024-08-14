@@ -46,7 +46,7 @@ public sealed class Board : MonoBehaviour
         {
             if (_selection.Count > 0)
             {
-                if (Array.IndexOf(_selection[0].Neighbours, tile) != -1)
+                if (Array.IndexOf(_selection[0].Neighbours, tile) != -1 && _selection[0] != tile)
                 {
                     _selection.Add(tile);
                 }
@@ -96,13 +96,13 @@ public sealed class Board : MonoBehaviour
         var tile1Item = tile1.Item;
 
         tile1.Item = tile2.Item;
-        tile2.Item = tile1.Item;
+        tile2.Item = tile1Item;
     }
 
     private bool CanPop()
     {
         for (var y = 0; y < Height; y++)
-            for (var x = 0; y < Width; x++)
+            for (var x = 0; x < Width; x++)
                 if (Tiles[x, y].GetConnectedTiles().Skip(1).Count() >= 2)
                     return true;
         
