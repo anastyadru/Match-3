@@ -46,13 +46,11 @@ public sealed class Board : MonoBehaviour
     
     public async void Select(Tile tile)
     {
-        if (!_selection.Contains(tile)) _selection.Add(tile);
-
-        if (_selection > 0)
+        if (!_selection.Contains(tile))
         {
-            
+            _selection.Add(tile);
         }
-        
+
         if (_selection.Count < 2) return;
         Debug.Log($"Selected tiles at ({_selection[0].x}, {_selection[0].y}) and ({_selection[1].x}, {_selection[1].y})");
         await Swap(_selection[0], _selection[1]);
