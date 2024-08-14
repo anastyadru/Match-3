@@ -52,8 +52,10 @@ public sealed class Board : MonoBehaviour
             {
                 
             }
-            
-            _selection.Add(tile);
+            else
+            {
+                _selection.Add(tile);
+            }
         }
 
         if (_selection.Count < 2) return;
