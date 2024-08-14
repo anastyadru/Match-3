@@ -48,6 +48,11 @@ public sealed class Board : MonoBehaviour
     {
         if (!_selection.Contains(tile))
         {
+            if (_selection > 0)
+            {
+                
+            }
+            
             _selection.Add(tile);
         }
 
