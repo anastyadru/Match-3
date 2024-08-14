@@ -52,7 +52,7 @@ public sealed class Board : MonoBehaviour
             {
                 if (Array.IndexOf(_selection[0].Neighbours, tile) != -1)
                 {
-                    
+                    _selection.Add(tile);
                 }
                 
             }
