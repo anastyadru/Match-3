@@ -59,6 +59,7 @@ public sealed class Board : MonoBehaviour
 
         if (_selection.Count < 2) return;
         Debug.Log($"Selected tiles at ({_selection[0].x}, {_selection[0].y}) and ({_selection[1].x}, {_selection[1].y})");
+        
         await Swap(_selection[0], _selection[1]);
 
         if (CanPop())
