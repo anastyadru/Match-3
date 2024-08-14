@@ -50,6 +50,10 @@ public sealed class Board : MonoBehaviour
         {
             if (_selection.Count > 0)
             {
+                if (Array.IndexOf(_selection[0].Neighbours, tile) != -1)
+                {
+                    
+                }
                 
             }
             else
