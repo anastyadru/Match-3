@@ -19,6 +19,16 @@ public sealed class Board : MonoBehaviour
 
     private const float TweenDuration = 0.25f;
     private void Awake() => Instance = this;
+    
+    private void Start()
+    {
+        InitializeTiles();
+    }
+
+    private void InitializeTiles()
+    {
+        
+    }
 
     private void Start()
     {
