@@ -9,6 +9,7 @@ public sealed class Tile : MonoBehaviour
     public int x;
     public int y;
     public Button button;
+    public Image icon;
 
     private Item _item;
 
@@ -41,24 +42,20 @@ public sealed class Tile : MonoBehaviour
 		Bottom,
 	};
 
-	public List<Tile> GetConnectedTiles(List<Tile> exclude = null)
+	public List<Tile> GetConnectedTiles(HashSet<Tile> exclude = null)
 	{
-		var result = new List<Tile> { this, };
+		exclude ??= new HashSet<Tile>();
+		if (exclude.Contains(this)) return new List<Tile>();
 
-		if (exclude == null)
-		{
-			exclude = new List<Tile> { this, };
-		}
-		else
-		{
-			exclude.Add(this);
-		}
+		exclude.Add(this);
+		var result = new List<Tile> { this };
 
 		foreach (var neighbour in Neighbours)
 		{
-			if (neighbour == null || exclude.Contains(neighbour) || neighbour.Item != Item) continue;
-
-			result.AddRange(neighbour.GetConnectedTiles(exclude));
+			if (neighbour != null && !exclude.Contains(neighbour) && neighbour.Item == Item)
+			{
+				result.AddRange(neighbour.GetConnectedTiles(exclude));
+			}
 		}
 
 		return result;
